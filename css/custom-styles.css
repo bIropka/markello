@@ -11,6 +11,12 @@
     font-style: normal;
 }
 @font-face {
+    font-family: 'Roboto Medium';
+    src: url("../source/fonts/RobotoMedium.woff") format("woff"), url("../source/fonts/RobotoMedium.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
     font-family: 'OpenSans Light';
     src: url("../source/fonts/OpenSansLight.woff") format("woff"), url("../source/fonts/OpenSansLight.ttf") format("truetype");
     font-weight: 300;
@@ -89,12 +95,6 @@ textarea {
     display: block;
     width: 100%;
     clear: both;
-}
-.in-wide {
-    -moz-text-align-last: justify;
-    -ms-text-align-last: justify;
-    text-align-last: justify;
-    text-align: justify;
 }
 
 h1 {
@@ -262,32 +262,268 @@ nav ul li a, .callback, .header-contacts a {
 }
 
 /***********************
-******* header *********
+****** services ********
 ***********************/
 
+.services ul {
+    -moz-text-align-last: justify;
+    -ms-text-align-last: justify;
+    text-align-last: justify;
+    text-align: justify;
+}
+.services ul li a {
+    display: inline-block;
+    padding-left: 80px;
+    position: relative;
+    font-size: 20px;
+    line-height: 35px;
+}
+.services ul li a:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 55px;
+    height: 35px;
+    background: #f0671c url('../source/images/arrow-right.png') no-repeat center;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+}
+.services ul li:nth-child(2) a:before {
+    background-color: #539b2f;
+}
+.services ul li:nth-child(3) a:before {
+    background-color: #3c7095;
+}
+.services ul li a:hover:before {
+    left: 20px;
+}
+
+
+/***********************
+****** partners ********
+***********************/
+
+.partners ul {
+    -moz-text-align-last: justify;
+    -ms-text-align-last: justify;
+    text-align-last: justify;
+    text-align: justify;
+}
+.partners ul li img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+}
+.partners ul li:hover img{
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+}
 
 
 
 /***********************
-******* header *********
+****** projects ********
 ***********************/
 
-
-
-
+.projects {
+    background-color: #000000;
+    overflow: hidden;
+}
+.projects .tagline {
+    width: 30%;
+    float: left;
+    font-family: "Roboto Light", sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+}
+.to-presentation {
+    display: block;
+    max-width: 160px;
+    border: 2px solid #ffffff;
+    padding: 10px 10px 70px 10px;
+    font-family: "Roboto Light", sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+}
+.to-presentation:after {
+    content: '';
+    display: block;
+    vertical-align: middle;
+    width: 35px;
+    height: 35px;
+    background: #539b2f url('../source/images/arrow-right.png') no-repeat center;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+}
+.to-presentation:hover {
+    text-decoration: none;
+    background-color: #ffffff;
+    color: #000000;
+}
+.to-presentation:hover:after {
+    background-color: #f0671c;
+}
+.slider-projects {
+    display: block;
+    width: 60%;
+    float: right;
+}
+.slider-projects p {
+    font-family: "Roboto Light", sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+.projects-control div {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: "Roboto Light", sans-serif;
+    font-size: 18px;
+    background-color: #919191;
+    padding: 3px 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.projects-control div.active {
+    background-color: #ffffff;
+}
+.to-portfolio {
+    float: right;
+    color: #ffffff;
+    font-family: "Roboto Light", sans-serif;
+    font-size: 18px;
+    text-decoration: underline;
+}
+.to-portfolio:hover {
+    text-decoration: none;
+}
+.slider-projects ul {
+    display: block;
+    position: relative;
+    height: 275px;
+    width: 100%;
+}
+.slider-projects ul:before {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 100%;
+    clear: both;
+    overflow: hidden;
+}
+.slider-projects ul li {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 45px;
+    left: 25000px;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+}
+.slider-projects ul li>div {
+    background-color: #ffffff;
+    padding: 10px 5px;
+}
+.slider-projects ul li.active {
+    left: 0;
+}
+.slider-projects .slider-control {
+    display: block;
+    width: 58px;
+    height: 14px;
+    margin: 20px 0 0 15px;
+    float: right;
+    background: transparent url('../source/images/sprite-slider-controls.png') no-repeat;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+.slide-developing, .slide-seo {
+    margin: 0 5px;
+    overflow: hidden;
+}
+.slide-developing img, .slide-seo img {
+    -webkit-transition: 3s;
+    -moz-transition: 3s;
+    -ms-transition: 3s;
+    -o-transition: 3s;
+    transition: 3s;
+}
+.slide-developing:hover img, .slide-seo:hover img {
+    -webkit-transform: translate(10px, 10px) scale(1.2);
+    -moz-transform: translate(10px, 10px) scale(1.2);
+    -ms-transform: translate(10px, 10px) scale(1.2);
+    -o-transform: translate(10px, 10px) scale(1.2);
+    transform: translate(10px, 10px) scale(1.2);
+}
+.slider-projects .slider-control-left {
+    background-position: -58px center;
+}
+.slider-projects .slider-control-left:hover {
+    background-position: left center;
+}
+.slider-projects .slider-control-right {
+    background-position: right center;
+}
+.slider-projects .slider-control-right:hover {
+    background-position: -116px center;
+}
 /***********************
-******* header *********
+***** promo block ******
 ***********************/
 
-
-
-
-/***********************
-******* header *********
-***********************/
-
-
-
+.promo-block {
+    text-align: right;
+    padding: 50px;
+}
+.what-you-get, .what-you-need, .unlike-other {
+    display: inline-block;
+    vertical-align: top;
+}
+.unlike-other {
+    width: 50%;
+    text-align: left;
+    background: linear-gradient(to right, #dbf3d5, #f3f8c7);
+    padding: 5px 0 5px 5px;
+}
+.unlike-other-inner {
+    background: #ffffff;
+}
+.unlike-other .title {
+    font-family: 'Roboto Medium', sans-serif;
+    font-size: 25px;
+}
+.unlike-other .text {
+    font-family: 'Roboto Light', sans-serif;
+    font-size: 17px;
+}
 
 /***********************
 ******* header *********
