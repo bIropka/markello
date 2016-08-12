@@ -1,0 +1,328 @@
+@font-face {
+    font-family: 'Roboto Regular';
+    src: url("../source/fonts/RobotoRegular.woff") format("woff"), url("../source/fonts/RobotoRegular.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto Light';
+    src: url("../source/fonts/RobotoLight.woff") format("woff"), url("../source/fonts/RobotoLight.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OpenSans Light';
+    src: url("../source/fonts/OpenSansLight.woff") format("woff"), url("../source/fonts/OpenSansLight.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+/******************************
+********** general ************
+******************************/
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 1.3;
+    color: #000000;
+    font-family: 'Roboto Regular', sans-serif;
+}
+ul li {
+    display: inline-block;
+    list-style: none;
+    vertical-align: middle;
+}
+
+a, button, input[type="submit"], input[type="cancel"], input[type="reset"] {
+    cursor: pointer;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-appearance: none;
+}
+
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+a:active, a:focus {
+    outline: none;
+}
+
+button, button:hover, button:active {
+    outline: none;
+    border: none;
+}
+button::-moz-focus-inner {
+    outline: none;
+    border: none;
+}
+input, input:hover, input:active, input:focus {
+    outline: none;
+    border: none;
+}
+textarea, textarea:hover, textarea:active, textarea:focus {
+    outline: none;
+    border: none;
+}
+textarea {
+    resize: none;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 50px;
+    position: relative;
+}
+.wrapper:after {
+    content: '';
+    display: block;
+    width: 100%;
+    clear: both;
+}
+.in-wide {
+    -moz-text-align-last: justify;
+    -ms-text-align-last: justify;
+    text-align-last: justify;
+    text-align: justify;
+}
+
+h1 {
+    font-weight: 100;
+}
+h2 {
+    font-family: "Roboto Light", sans-serif;
+    font-size: 17px;
+}
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.form-field::-webkit-input-placeholder {font-family: 'Roboto Light', sans-serif; opacity: 1; color: #000000;}
+.form-field::-moz-placeholder {font-family: 'Roboto Light', sans-serif; opacity: 1; color: #000000;}
+.form-field:-moz-placeholder {font-family: 'Roboto Light', sans-serif; opacity: 1; color: #000000;}
+.form-field:-ms-input-placeholder {font-family: 'Roboto Light', sans-serif; opacity: 1; color: #000000;}
+
+.form-field:focus::-webkit-input-placeholder {color: transparent;}
+.form-field:focus::-moz-placeholder {color: transparent;}
+.form-field:focus:-moz-placeholder {color: transparent;}
+.form-field:focus:-ms-input-placeholder {color: transparent;}
+
+/***********************
+******* header *********
+***********************/
+
+header[role='banner'] {
+    border-bottom: 1px solid #ececec;
+}
+header[role='banner'] .wrapper {
+    padding: 15px 50px 15px 20px;
+}
+.logo, nav, .header-contacts {
+    display: inline-block;
+    vertical-align: middle;
+}
+.logo {
+    width: 53px;
+    height: 18px;
+    background: transparent url('../source/images/sprite-logo.png') no-repeat center top;
+    position: relative;
+    margin-right: 40px;
+}
+.logo:hover {
+    background-position: bottom center;
+}
+.logo:after {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width: 1px;
+    background-color: #ececec;
+    position: absolute;
+    top: 0;
+    right: -20px;
+}
+
+nav ul li {
+    margin-right: 30px;
+}
+nav ul li:last-child {
+    margin-right: 0;
+}
+nav ul li a, .callback, .header-contacts a {
+    font-size: 13px;
+}
+.header-contacts {
+    float: right;
+}
+.callback {
+    background-color: transparent;
+    margin-right: 20px;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+}
+.callback:hover {
+    border: 1px solid #000000;
+}
+.callback:active, .callback:focus {
+    border: 1px solid #fb1042;
+    color: #fb1042;
+}
+
+/***********************
+***** employees ********
+***********************/
+
+.slider-employees {
+    width: 50%;
+    float: left;
+}
+.slider-employees .slick-dots li {
+    margin-right: 5px;
+}
+.slider-employees .slick-dots li:last-child {
+    margin-right: 0;
+}
+.slider-employees .slick-dots li button {
+    color: transparent;
+    font-size: 0;
+    display: block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #000000;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    background-color: transparent;
+}
+.slider-employees .slick-dots li.slick-active button {
+    background-color: #000000;
+}
+.slider-employees .slick-dots li button:hover {
+    background-color: #ececec;
+}
+.slide-employee, .slide-employee:active {
+    outline: none;
+}
+.employee-name, .employee-specialty {
+    font-size: 24px;
+}
+.employee-info {
+    font-family: "OpenSans Light", sans-serif;
+    margin: 25px 0;
+}
+.employees-photos {
+    width: 45%;
+    float: right;
+}
+.employees-photos li {
+    display: block;
+    width: 33.33333%;
+    float: left;
+    cursor: pointer;
+    position: relative;
+}
+.employees-photos li:before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #3c7095;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+    transition: 0.6s;
+}
+.employees-photos img {
+    display: block;
+    position: relative;
+    border-left: 2px solid transparent;
+    border-top: 2px solid transparent;
+    z-index: 1;
+}
+.employees-photos li:hover:before, .employees-photos li.active:before {
+    width: 100%;
+    height: 100%;
+}
+
+/***********************
+******* header *********
+***********************/
+
+
+
+
+/***********************
+******* header *********
+***********************/
+
+
+
+
+/***********************
+******* header *********
+***********************/
+
+
+
+
+/***********************
+******* header *********
+***********************/
+
+
+
+
+/***********************
+******* header *********
+***********************/
+
+
+
+
+/***********************
+******* header *********
+***********************/
+
+
+
+
+/***********************
+******* header *********
+***********************/
+
+
+
+
+/***********************
+******* header *********
+***********************/
+
+
+/***********************
+******* header *********
+***********************/
+
+
+
+
+
+/***********************
+******* header *********
+***********************/
