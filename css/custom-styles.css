@@ -103,6 +103,7 @@ h1 {
 h2 {
     font-family: "Roboto Light", sans-serif;
     font-size: 17px;
+    margin-bottom: 20px;
 }
 img {
     display: block;
@@ -466,6 +467,7 @@ nav ul li a, .callback, .header-contacts a {
     z-index: 10;
 }
 .slide-developing, .slide-seo {
+    display: block;
     margin: 0 5px;
     overflow: hidden;
 }
@@ -501,44 +503,129 @@ nav ul li a, .callback, .header-contacts a {
 
 .promo-block {
     text-align: right;
-    padding: 50px;
+    padding: 50px 0 50px 50px;
 }
 .what-you-get, .what-you-need, .unlike-other {
     display: inline-block;
     vertical-align: top;
+    text-align: left;
+    padding: 25px 25px;
+}
+.what-you-need {
+    margin: 0 50px 0 15px;
+}
+.what-you-get .title, .what-you-need .title {
+    font-family: "Roboto Light", sans-serif;
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+.what-you-need .title {
+    color: #b83030;
+}
+.what-you-get .text, .what-you-need .text {
+    font-family: "Roboto Light", sans-serif;
+    font-size: 20px;
+    position: relative;
+}
+.what-you-get .text span {
+    display: inline-block;
+    vertical-align: middle;
+    width: 24px;
+    height: 8px;
+    background: url('../source/images/arrow-black.png');
+    position: absolute;
+    right: -45px;
+    top: 10px;
 }
 .unlike-other {
     width: 50%;
-    text-align: left;
     background: linear-gradient(to right, #dbf3d5, #f3f8c7);
     padding: 5px 0 5px 5px;
 }
 .unlike-other-inner {
     background: #ffffff;
+    padding: 20px 25px;
 }
 .unlike-other .title {
     font-family: 'Roboto Medium', sans-serif;
     font-size: 25px;
+    margin-bottom: 30px;
 }
 .unlike-other .text {
+    display: inline-block;
+    max-width: 500px;
     font-family: 'Roboto Light', sans-serif;
     font-size: 17px;
 }
 
 /***********************
-******* header *********
+**** video-reviews *****
 ***********************/
 
-
-
+.video-reviews ul li {
+    display: block;
+    width: 23.5%;
+    margin-right: 2%;
+    float: left;
+}
+.video-reviews ul li:last-child {
+    margin-right: 0;
+}
+.video-reviews ul li iframe {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
 
 /***********************
-******* header *********
+**** all-services ******
 ***********************/
 
-
-
-
+.all-services ul li {
+    display: block;
+    width: 18.8%;
+    margin-right: 1.5%;
+    float: left;
+    position: relative;
+    border: 4px solid #ebebeb;
+    height: auto;
+}
+.all-services ul li:before {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #9fe7c8;
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+    transition: 0.6s;
+}
+.all-services ul li:last-child {
+    margin-right: 0;
+}
+.all-services ul li a {
+    display: block;
+    min-height: 120px;
+    background-color: #ffffff;
+    position: relative;
+    z-index: 1;
+    font-family: "Roboto Light", sans-serif;
+    font-size: 22px;
+    text-decoration: underline;
+    padding: 15px;
+}
+.all-services ul li:hover a {
+    text-decoration: none;
+}
+.all-services ul li:hover:before {
+    width: 0;
+    height: 0;
+}
 /***********************
 ******* header *********
 ***********************/
