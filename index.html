@@ -15,6 +15,8 @@
 
         <a href="index.html" class="logo"></a>
 
+        <div class="burger"></div>
+
         <nav>
 
             <ul>
@@ -356,8 +358,10 @@
 
             </ul>
 
-            <div class="slider-control slider-control-right"></div>
-            <div class="slider-control slider-control-left"></div>
+            <div class="controls">
+                <div class="slider-control slider-control-left"></div>
+                <div class="slider-control slider-control-right"></div>
+            </div>
 
         </div>
 
@@ -475,15 +479,13 @@
 
     <div class="wrapper">
 
-        <p class="title"></p>
+        <p class="title">Начать сотрудничество просто</p>
 
-        <p class="text">
-
-        </p>
+        <p class="text">Расскажите о своем бизнесе, идеях и задачах. Мы все изучим, свяжемся с вами и предметно обсудим проект.</p>
 
         <form action="#">
 
-            <fieldset>
+            <fieldset class="short-fields">
 
                 <label class="form-field-wrap">
                     <input type="text" id="user-name" class="form-field" placeholder="Представьтесь, пожалуйста"/>
@@ -504,14 +506,18 @@
             </label>
 
             <label class="file-download">
-                <span>Прикрепите файл</span>
+                Прикрепите файл
                 <span>pdf. doc. jpg. txt.</span>
                 <input type="file"/>
             </label>
 
-            <p></p>
+            <fieldset class="submit-block">
 
-            <input type="submit" value="Отправить"/>
+                <p><span>После отправки заявки:</span> позвоним &#8594; соберём данные &#8594; построим прогноз &#8594; презентуем проект &#8594; старт</p>
+
+                <input type="submit" value="Отправить"/>
+
+            </fieldset>
 
         </form>
 
@@ -521,37 +527,41 @@
 
 <footer role="contentinfo">
 
-    <div class="logo"></div>
+    <div class="wrapper">
 
-    <div class="footer-contact">
+        <a href="index.html" class="logo"></a>
 
-        <div class="title">Для писем <span> - </span></div>
+        <div class="footer-contact">
 
-        <a href="mailto:info@pixips.ru">info@pixips.ru</a>
+            <div class="title">Для писем <span>&#8211;</span> </div>
 
-    </div>
+            <a href="mailto:info@pixips.ru">info@pixips.ru</a>
 
-    <div class="footer-contact">
+        </div>
 
-        <div class="title">Поговорить скайпом <span> - </span></div>
+        <div class="footer-contact">
 
-        <a href="">pixips</a>
+            <div class="title">Поговорить скайпом <span>&#8211;</span> </div>
 
-    </div>
+            <a href="skype:pixips">pixips</a>
 
-    <div class="footer-contact">
+        </div>
 
-        <div class="title">или  по телефону <span> - </span></div>
+        <div class="footer-contact">
 
-        <a href="tel:+74952152219">+7 (495) 215-22-19</a>
+            <div class="title">или  по телефону <span>&#8211;</span> </div>
 
-    </div>
+            <a href="tel:+74952152219">+7 (495) 215-22-19</a>
 
-    <div class="vacancies">
+        </div>
 
-        <div class="title">ПСС... Нужна клевая работа? </div>
+        <div class="vacancies">
 
-        <a href="#">Вакансии</a>
+            <div class="title">ПСС... Нужна клевая работа? </div>
+
+            <a href="#">Вакансии</a>
+
+        </div>
 
     </div>
 

@@ -35,7 +35,7 @@
     font-size: 16px;
     line-height: 1.3;
     color: #000000;
-    font-family: 'Roboto Regular', sans-serif;
+    font-family: 'Roboto Light', sans-serif;
 }
 ul li {
     display: inline-block;
@@ -101,7 +101,6 @@ h1 {
     font-weight: 100;
 }
 h2 {
-    font-family: "Roboto Light", sans-serif;
     font-size: 17px;
     margin-bottom: 20px;
 }
@@ -143,7 +142,7 @@ header[role='banner'] .wrapper {
     margin-right: 40px;
 }
 .logo:hover {
-    background-position: bottom center;
+    background-position: center -18px;
 }
 .logo:after {
     content: '';
@@ -164,6 +163,7 @@ nav ul li:last-child {
 }
 nav ul li a, .callback, .header-contacts a {
     font-size: 13px;
+    font-family: 'Roboto Regular', sans-serif;
 }
 .header-contacts {
     float: right;
@@ -180,6 +180,9 @@ nav ul li a, .callback, .header-contacts a {
 .callback:active, .callback:focus {
     border: 1px solid #fb1042;
     color: #fb1042;
+}
+.burger {
+    display: none;
 }
 
 /***********************
@@ -218,10 +221,10 @@ nav ul li a, .callback, .header-contacts a {
     outline: none;
 }
 .employee-name, .employee-specialty {
+    font-family: 'Roboto Regular', sans-serif;
     font-size: 24px;
 }
 .employee-info {
-    font-family: "OpenSans Light", sans-serif;
     margin: 25px 0;
 }
 .employees-photos {
@@ -274,6 +277,7 @@ nav ul li a, .callback, .header-contacts a {
 }
 .services ul li a {
     display: inline-block;
+    font-family: 'Roboto Regular', sans-serif;
     padding-left: 80px;
     position: relative;
     font-size: 20px;
@@ -346,7 +350,6 @@ nav ul li a, .callback, .header-contacts a {
 .projects .tagline {
     width: 30%;
     float: left;
-    font-family: "Roboto Light", sans-serif;
     font-size: 18px;
     color: #ffffff;
 }
@@ -355,7 +358,6 @@ nav ul li a, .callback, .header-contacts a {
     max-width: 160px;
     border: 2px solid #ffffff;
     padding: 10px 10px 70px 10px;
-    font-family: "Roboto Light", sans-serif;
     font-size: 18px;
     color: #ffffff;
     position: absolute;
@@ -390,7 +392,6 @@ nav ul li a, .callback, .header-contacts a {
     float: right;
 }
 .slider-projects p {
-    font-family: "Roboto Light", sans-serif;
     font-size: 20px;
     color: #ffffff;
     margin-bottom: 10px;
@@ -398,7 +399,6 @@ nav ul li a, .callback, .header-contacts a {
 .projects-control div {
     display: inline-block;
     vertical-align: middle;
-    font-family: "Roboto Light", sans-serif;
     font-size: 18px;
     background-color: #919191;
     padding: 3px 15px;
@@ -414,7 +414,6 @@ nav ul li a, .callback, .header-contacts a {
 .to-portfolio {
     float: right;
     color: #ffffff;
-    font-family: "Roboto Light", sans-serif;
     font-size: 18px;
     text-decoration: underline;
 }
@@ -426,14 +425,7 @@ nav ul li a, .callback, .header-contacts a {
     position: relative;
     height: 275px;
     width: 100%;
-}
-.slider-projects ul:before {
-    content: '';
-    display: block;
-    height: 1px;
-    width: 100%;
-    clear: both;
-    overflow: hidden;
+    margin-bottom: 20px;
 }
 .slider-projects ul li {
     display: block;
@@ -455,12 +447,14 @@ nav ul li a, .callback, .header-contacts a {
 .slider-projects ul li.active {
     left: 0;
 }
+.slider-projects .controls {
+    float: right;
+}
 .slider-projects .slider-control {
-    display: block;
+    display: inline-block;
     width: 58px;
     height: 14px;
     margin: 20px 0 0 15px;
-    float: right;
     background: transparent url('../source/images/sprite-slider-controls.png') no-repeat;
     cursor: pointer;
     position: relative;
@@ -503,7 +497,7 @@ nav ul li a, .callback, .header-contacts a {
 
 .promo-block {
     text-align: right;
-    padding: 50px 0 50px 50px;
+    padding: 50px 0;
 }
 .what-you-get, .what-you-need, .unlike-other {
     display: inline-block;
@@ -512,10 +506,9 @@ nav ul li a, .callback, .header-contacts a {
     padding: 25px 25px;
 }
 .what-you-need {
-    margin: 0 50px 0 15px;
+    margin: 0 25px 0 15px;
 }
 .what-you-get .title, .what-you-need .title {
-    font-family: "Roboto Light", sans-serif;
     font-size: 25px;
     margin-bottom: 30px;
 }
@@ -523,7 +516,6 @@ nav ul li a, .callback, .header-contacts a {
     color: #b83030;
 }
 .what-you-get .text, .what-you-need .text {
-    font-family: "Roboto Light", sans-serif;
     font-size: 20px;
     position: relative;
 }
@@ -554,7 +546,6 @@ nav ul li a, .callback, .header-contacts a {
 .unlike-other .text {
     display: inline-block;
     max-width: 500px;
-    font-family: 'Roboto Light', sans-serif;
     font-size: 17px;
 }
 
@@ -581,6 +572,10 @@ nav ul li a, .callback, .header-contacts a {
 **** all-services ******
 ***********************/
 
+.all-services {
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+}
 .all-services ul li {
     display: block;
     width: 18.8%;
@@ -614,7 +609,6 @@ nav ul li a, .callback, .header-contacts a {
     background-color: #ffffff;
     position: relative;
     z-index: 1;
-    font-family: "Roboto Light", sans-serif;
     font-size: 22px;
     text-decoration: underline;
     padding: 15px;
@@ -626,23 +620,359 @@ nav ul li a, .callback, .header-contacts a {
     width: 0;
     height: 0;
 }
-/***********************
-******* header *********
-***********************/
-
-
-
 
 /***********************
-******* header *********
+**** get-in-touch ******
 ***********************/
 
+.get-in-touch .wrapper>.title {
+    display: block;
+    width: 100%;
+    max-width: 910px;
+    margin: 0 auto;
+    font-size: 30px;
+    text-align: center;
+}
+.get-in-touch .text {
+
+    text-align: center;
+    margin: 5px 0 15px;
+}
+.get-in-touch form {
+    display: block;
+    width: 100%;
+    max-width: 910px;
+    margin: 0 auto;
+}
+.get-in-touch form:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.get-in-touch .short-fields {
+     display: block;
+     float: left;
+     border: none;
+ }
+.get-in-touch .form-field-wrap {
+    display: block;
+    width: 240px;
+    height: 50px;
+    margin: 0 10px 10px 0;
+}
+.get-in-touch .form-field {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #dbf3d5, #f3f8c7);
+    padding: 0 10px;
+}
+.get-in-touch .form-textarea-wrap {
+    float: left;
+    width: 480px;
+    height: 170px;
+}
+.get-in-touch .form-textarea {
+    padding: 18px 10px;
+}
+.get-in-touch .file-download {
+    display: block;
+    width: 170px;
+    height: 170px;
+    float: right;
+    border: 5px solid #ebebeb;
+    text-align: center;
+    padding: 10px;
+    background: transparent url('../source/images/icon-file-download.png') no-repeat center 80%;
+    background-size: 50%;
+    cursor: pointer;
+}
+.get-in-touch .file-download input {
+    display: none;
+}
+.get-in-touch .file-download span {
+    color: #8b8b8b;
+}
+.get-in-touch .submit-block {
+    display: block;
+    width: 100%;
+    padding-top: 10px;
+    border: none;
+}
+.get-in-touch .submit-block p {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: 'Roboto Regular', sans-serif;
+    font-size: 14px;
+}
+.get-in-touch .submit-block p span {
+    font-family: 'Roboto Light', sans-serif;
+    font-size: 14px;
+}
+.get-in-touch input[type='submit'] {
+    display: inline-block;
+    vertical-align: middle;
+    width: 170px;
+    height: 50px;
+    background-color: #000000;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 30px;
+    color: #ffffff;
+    font-family: 'Roboto Regular', sans-serif;
+    font-size: 20px;
+    margin-left: 28px;
+}
 
 /***********************
-******* header *********
+******* footer *********
+***********************/
+footer[role='contentinfo'] {
+    background-color: #000000;
+}
+footer[role='contentinfo'] .wrapper {
+    padding: 15px 50px 15px 20px;
+}
+footer[role='contentinfo'] .logo {
+    background-position: center bottom;
+}
+footer[role='contentinfo'] .logo:hover {
+    background-position: center -18px;
+}
+footer[role='contentinfo'] .logo:after {
+    display: none;
+}
+.footer-contact {
+    display: inline-block;
+}
+.footer-contact .title, .vacancies .title, .footer-contact span {
+    display: inline-block;
+    color: #ffffff;
+}
+.footer-contact a, .vacancies a {
+    color: #c1ffae;
+}
+.vacancies {
+    float: right;
+}
+.vacancies a {
+    text-decoration: underline;
+}
+.vacancies a:hover {
+    text-decoration: none;
+}
+
+/***********************
+**** media queries *****
 ***********************/
 
+@media (max-width: 1260px) {
 
+    .wrapper {
+        padding: 40px 25px;
+    }
+    header[role='banner'] .wrapper {
+        padding: 15px 25px 15px 20px;
+    }
+    .employee-name, .employee-specialty {
+        font-size: 20px;
+    }
+    .services ul li {
+        display: block;
+        width: 100%;
+        max-width: 380px;
+        margin: 0 auto 40px;
+    }
+    .services ul li:last-child {
+        margin-bottom: 0;
+    }
+    .unlike-other {
+        width: 100%;
+    }
+    .promo-block {
+        text-align: center;
+    }
+    .unlike-other .title, .unlike-other .text {
+        display: block;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .all-services ul li a {
+        font-size: 18px;
+        min-height: 100px;
+    }
+    footer[role='contentinfo'] {
+        text-align: center;
+    }
+    .vacancies {
+        display: block;
+        float: none;
+        margin-top: 10px;
+    }
+}
+@media (max-width: 980px) {
+
+    .logo:after {
+        display: none;
+    }
+    .slider-employees, .employees-photos {
+        display: block;
+        float: none;
+        width: 100%;
+        max-width: 600px;
+        margin: 20px auto;
+    }
+    .partners ul li {
+        max-width: 30%;
+    }
+    .partners ul li:nth-child(4), .partners ul li:nth-child(5), .partners ul li:nth-child(6) {
+        display: none;
+    }
+    .video-reviews ul li {
+        width: 47.5%;
+        margin-right: 5%;
+        margin-bottom: 5%;
+    }
+    .video-reviews ul li:nth-child(2n) {
+        margin-right: 0;
+    }
+
+
+    .projects .tagline, .slider-projects {
+        width: 100%;
+        float: none;
+        margin: 20px 0;
+    }
+    .slider-projects .controls {
+        float: left;
+    }
+    .slider-projects ul {
+        width: 430px;
+        margin: 0 auto;
+        height: 1320px;
+    }
+    .to-portfolio {
+        float: none;
+        position: absolute;
+        bottom: 40px;
+        right: 25px;
+        z-index: 10;
+    }
+    .to-presentation {
+        display: none;
+    }
+    .what-you-get, .what-you-need {
+        display: block;
+        width: 100%;
+        max-width: 360px;
+        margin: 10px auto;
+        padding: 15px;
+    }
+    .unlike-other .title, .unlike-other .text {
+        max-width: 360px;
+        margin: 0 auto;
+    }
+    .what-you-get .text span {
+        display: none;
+    }
+    .all-services ul li {
+        width: 47.5%;
+        margin: 0 5% 5% 0;
+    }
+    .all-services ul li:nth-child(2n) {
+        margin: 0 0 5% 0;
+    }
+    .all-services ul li a {
+        font-size: 16px;
+        min-height: 60px;
+    }
+    .get-in-touch .wrapper>.title {
+        font-size: 24px;
+    }
+    .get-in-touch .wrapper>p, .get-in-touch .wrapper>.title, .get-in-touch .short-fields,
+    .get-in-touch .form-textarea-wrap, .get-in-touch .file-download, .get-in-touch .submit-block {
+        display: block;
+        text-align: left;
+        width: 100%;
+        max-width: 600px;
+        margin: 10px auto;
+        float: none;
+    }
+    .get-in-touch .form-field-wrap {
+        width: 100%;
+    }
+    .get-in-touch .file-download {
+        height: auto;
+        max-width: 360px;
+        background-position: 95% center;
+        background-size: auto 70%;
+    }
+    .get-in-touch .file-download span {
+        display: block;
+    }
+    .get-in-touch input[type='submit'] {
+        margin: 20px 0 0 0;
+    }
+    footer[role='contentinfo'] .logo {
+        margin: 10px 0 20px;
+    }
+    .footer-contact span {
+        display: none;
+    }
+    .footer-contact a {
+        float: right;
+    }
+    .footer-contact, .vacancies {
+        display: block;
+        width: 100%;
+        max-width: 360px;
+        margin: 5px auto;
+        text-align: left;
+    }
+    .vacancies {
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .wrapper {
+        padding: 30px 10px;
+    }
+    .slider-projects ul {
+        width: 300px;
+        margin: 0 auto;
+        height: 920px;
+    }
+    .slider-projects .slider-control {
+        display: inline-block;
+        width: 40px;
+        height: 12px;
+        background-size: cover;
+        margin: 20px 0 0 10px;
+        position: relative;
+        z-index: 10;
+    }
+    .to-portfolio {
+        bottom: 30px;
+        right: 10px;
+    }
+    .slider-projects .slider-control-left {
+        background-position: 30.8% center;
+    }
+    .slider-projects .slider-control-left:hover {
+        background-position: left center;
+    }
+    .slider-projects .slider-control-right {
+        background-position: right center;
+    }
+    .slider-projects .slider-control-right:hover {
+        background-position: 68.6% center;
+    }
+
+}
 
 
 

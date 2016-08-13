@@ -27,13 +27,31 @@ $(document).ready(function () {
     sliderDeveloping.slick({
         slidesToShow: 3,
         slidesTpScroll: 1,
-        arrows: false
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 981,
+                settings: {
+                    vertical: true,
+                    verticalSwiping: true
+                }
+            }
+        ]
     });
 
     sliderSeo.slick({
         slidesToShow: 3,
         slidesTpScroll: 1,
-        arrows: false
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 981,
+                settings: {
+                    vertical: true,
+                    verticalSwiping: true
+                }
+            }
+        ]
     });
 
     $('.projects-control div').click(function() {
