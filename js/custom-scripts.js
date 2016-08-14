@@ -3,9 +3,20 @@ $(document).ready(function () {
     /******************************
      ******* init scripts *********
      ******************************/
+
     var sliderEmployee = $('.slider-employees');
     var sliderDeveloping = $('.slider-projects-developing');
     var sliderSeo = $('.slider-projects-seo');
+
+    /******************************
+     ******* other scripts ********
+     ******************************/
+
+    $('.burger').click(function() {
+
+        $(this).toggleClass('active');
+
+    });
 
     /******************************
      *********** sliders **********

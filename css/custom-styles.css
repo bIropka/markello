@@ -816,6 +816,23 @@ footer[role='contentinfo'] .logo:after {
     .logo:after {
         display: none;
     }
+    nav, .header-contacts {
+        display: none;
+    }
+    .burger {
+        display: block;
+        width: 23px;
+        height: 18px;
+        position: absolute;
+        right: 25px;
+        top: 15px;
+        float: right;
+        background: transparent url('../source/images/sprite-burger.png') left center;
+        cursor: pointer;
+    }
+    .burger.active {
+        background-position: right center;
+    }
     .slider-employees, .employees-photos {
         display: block;
         float: none;
@@ -837,8 +854,6 @@ footer[role='contentinfo'] .logo:after {
     .video-reviews ul li:nth-child(2n) {
         margin-right: 0;
     }
-
-
     .projects .tagline, .slider-projects {
         width: 100%;
         float: none;
