@@ -165,6 +165,31 @@ nav ul li a, .callback, .header-contacts a {
     font-size: 13px;
     font-family: 'Roboto Regular', sans-serif;
 }
+nav ul li a {
+    position: relative;
+    line-height: 18px;
+}
+nav ul li a:hover {
+    text-decoration: none;
+}
+nav ul li a:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background-color: #000000;
+    position: absolute;
+    bottom: -21px;
+    left: 0;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+    transition: 0.6s;
+}
+nav ul li a.active:after {
+    width: 100%;
+}
 .header-contacts {
     float: right;
 }
@@ -189,6 +214,10 @@ nav ul li a, .callback, .header-contacts a {
 ***** employees ********
 ***********************/
 
+.typed-cursor{
+    opacity: 0;
+    display: none;
+}
 .slider-employees {
     width: 50%;
     float: left;
@@ -217,15 +246,26 @@ nav ul li a, .callback, .header-contacts a {
 .slider-employees .slick-dots li button:hover {
     background-color: #ececec;
 }
+.slide-employee {
+    padding-top: 30px;
+}
 .slide-employee, .slide-employee:active {
     outline: none;
 }
-.employee-name, .employee-specialty {
+.employee-hello {
     font-family: 'Roboto Regular', sans-serif;
     font-size: 24px;
 }
 .employee-info {
     margin: 25px 0;
+}
+.marks-info {
+    opacity: 0;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
 }
 .employees-photos {
     width: 45%;
@@ -237,6 +277,16 @@ nav ul li a, .callback, .header-contacts a {
     float: left;
     cursor: pointer;
     position: relative;
+    opacity: 0;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+}
+
+.employees-photos li.visible, .marks-info.visible {
+    opacity: 1;
 }
 .employees-photos li:before {
     content: '';
@@ -253,6 +303,7 @@ nav ul li a, .callback, .header-contacts a {
     -o-transition: 0.6s;
     transition: 0.6s;
 }
+
 .employees-photos img {
     display: block;
     position: relative;
@@ -433,7 +484,7 @@ nav ul li a, .callback, .header-contacts a {
     width: 100%;
     position: absolute;
     top: 45px;
-    left: 25000px;
+    left: 2500px;
     -webkit-transition: 1s;
     -moz-transition: 1s;
     -ms-transition: 1s;
@@ -666,6 +717,10 @@ nav ul li a, .callback, .header-contacts a {
     height: 100%;
     background: linear-gradient(to right, #dbf3d5, #f3f8c7);
     padding: 0 10px;
+    border: 1px solid transparent;
+}
+.get-in-touch .form-field:focus {
+    border: 1px solid #539b28;
 }
 .get-in-touch .form-textarea-wrap {
     float: left;
@@ -690,7 +745,7 @@ nav ul li a, .callback, .header-contacts a {
 .get-in-touch .file-download input {
     display: none;
 }
-.get-in-touch .file-download span {
+.get-in-touch .file-download span:nth-child(2) {
     color: #8b8b8b;
 }
 .get-in-touch .submit-block {
@@ -774,7 +829,7 @@ footer[role='contentinfo'] .logo:after {
     header[role='banner'] .wrapper {
         padding: 15px 25px 15px 20px;
     }
-    .employee-name, .employee-specialty {
+    .employee-hello {
         font-size: 20px;
     }
     .services ul li {
@@ -813,11 +868,28 @@ footer[role='contentinfo'] .logo:after {
 }
 @media (max-width: 980px) {
 
-    .logo:after {
+    .logo {float: none}
+    nav, nav ul li, .header-contacts .callback, .header-contacts a {
+        display: block;
+        text-align: right;
+        margin: 0;
+        padding: 0 0 0 0;
+        float: none;
+    }
+    nav, .header-contacts, .logo:after {
         display: none;
     }
-    nav, .header-contacts {
-        display: none;
+    nav ul li {
+        margin-top: 5px;
+    }
+    nav ul li:first-child {
+        margin-top: 15px;
+    }
+    .header-contacts .callback {
+        margin-top: 20px;
+    }
+    .header-contacts a {
+        margin-top: 5px;
     }
     .burger {
         display: block;
@@ -888,6 +960,9 @@ footer[role='contentinfo'] .logo:after {
         max-width: 360px;
         margin: 0 auto;
     }
+    .unlike-other {
+        padding: 5px;
+    }
     .what-you-get .text span {
         display: none;
     }
@@ -954,7 +1029,7 @@ footer[role='contentinfo'] .logo:after {
 @media (max-width: 480px) {
 
     .wrapper {
-        padding: 30px 10px;
+        padding: 20px 10px;
     }
     .slider-projects ul {
         width: 300px;

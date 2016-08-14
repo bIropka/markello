@@ -8,15 +8,43 @@ $(document).ready(function () {
     var sliderDeveloping = $('.slider-projects-developing');
     var sliderSeo = $('.slider-projects-seo');
 
+    setTimeout(function() {
+        $('.marks-photo').addClass('visible');
+    }, 1000);
+
+    $(".marks-hello").typed({
+        strings: ["^500 Здравствуйте, меня зовут Марк Дружин.<br>Я занимаюсь созданием качественных seo сайтов под ключ. На моем счету более 400 выполненных проектов."],
+        typeSpeed: 0,
+        callback: function(){
+            $('.marks-info').addClass('visible');
+            $(setInterval(function() {
+                $('.employees-photos li').addClass('visible');
+            }, 1000));
+        }
+    });
+
+
     /******************************
      ******* other scripts ********
      ******************************/
 
     $('.burger').click(function() {
-
         $(this).toggleClass('active');
-
+        $('nav').slideToggle();
+        $('.header-contacts').slideToggle();
     });
+
+    $('nav ul li a').hover(function() {
+        if ($(document).width() > 980) {
+            $(this).toggleClass('active');
+        }
+    });
+
+    $('input[type="tel"]').mask("+7 ( 9 9 9 ) 9 9 9 - 9 9 - 9 9");
+    $('input[type="tel"]').click(function() {
+        $(this).focus();
+    });
+
 
     /******************************
      *********** sliders **********
