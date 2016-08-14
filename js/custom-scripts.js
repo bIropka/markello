@@ -28,6 +28,8 @@ $(document).ready(function () {
      ******* other scripts ********
      ******************************/
 
+    $('#reviews').lightGallery();
+
     $('.burger').click(function() {
         $(this).toggleClass('active');
         $('nav').slideToggle();
@@ -43,6 +45,15 @@ $(document).ready(function () {
     $('input[type="tel"]').mask("+7 ( 9 9 9 ) 9 9 9 - 9 9 - 9 9");
     $('input[type="tel"]').click(function() {
         $(this).focus();
+    });
+
+    $('#file-download').on('change', function(){
+
+        var temp = $(this).val().split('\\');
+        var fileName = temp[temp.length - 1];
+        $('.file-name').html(fileName);
+        $('.file-type').css('opacity', 0);
+
     });
 
 

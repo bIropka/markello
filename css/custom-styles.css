@@ -604,16 +604,16 @@ nav ul li a.active:after {
 **** video-reviews *****
 ***********************/
 
-.video-reviews ul li {
+.video-reviews .review {
     display: block;
     width: 23.5%;
     margin-right: 2%;
     float: left;
 }
-.video-reviews ul li:last-child {
+.video-reviews .review:last-child {
     margin-right: 0;
 }
-.video-reviews ul li iframe {
+.video-reviews .review img {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
@@ -741,11 +741,19 @@ nav ul li a.active:after {
     background: transparent url('../source/images/icon-file-download.png') no-repeat center 80%;
     background-size: 50%;
     cursor: pointer;
+    overflow: hidden;
 }
 .get-in-touch .file-download input {
-    display: none;
+    opacity: 0;
 }
-.get-in-touch .file-download span:nth-child(2) {
+.get-in-touch .file-download .file-name {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.get-in-touch .file-download .file-type {
     color: #8b8b8b;
 }
 .get-in-touch .submit-block {
