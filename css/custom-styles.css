@@ -901,6 +901,94 @@ footer[role='contentinfo'] .logo:after {
 }
 
 /***********************
+******** modals ********
+***********************/
+
+.window-callback {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.7);
+    display: none;
+    text-align: left;
+    z-index: 11;
+}
+.form-callback {
+    position: absolute;
+    width: 320px;
+    height: 250px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    z-index: 12;
+}
+.close-marker {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url('../source/images/sprite-close-marker.png') no-repeat left center;
+    background-size: cover;
+    position: absolute;
+    top: -60px;
+    right: -75px;
+    cursor: pointer;
+}
+.close-marker:hover {
+    background-position: right center;
+}
+.form-callback .form-field-wrap {
+    display: block;
+    width: 280px;
+    height: 50px;
+    margin: 20px auto;
+}
+.form-callback .form-field {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #dbf3d5, #f3f8c7);
+    padding: 0 20px 0 10px;
+    border: 1px solid transparent;
+}
+.form-callback .form-field:focus {
+    border: 1px solid #539b28;
+}
+.form-callback p {
+    display: inline-block;
+    width: 120px;
+    font-size: 13px;
+    margin-top: 20px;
+}
+.form-callback input[type='submit'] {
+    display: block;
+    width: 160px;
+    height: 50px;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Roboto Medium', sans-serif;
+    font-size: 15px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    float: right;
+    margin-top: 10px;
+    border: 1px solid #000000;
+}
+.form-callback input[type='submit']:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+.form-callback input[type='submit']:active {
+    color: #ff0000;
+}
+
+/***********************
 **** media queries *****
 ***********************/
 
@@ -1150,6 +1238,9 @@ footer[role='contentinfo'] .logo:after {
     }
     .slider-projects .slider-control-right:hover {
         background-position: 68.6% center;
+    }
+    .close-marker {
+        right: 0;
     }
 
 }

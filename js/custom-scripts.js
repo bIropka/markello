@@ -77,6 +77,17 @@ $(document).ready(function () {
         return false;
     });
 
+    $('.callback').click(function () {
+        $('.window-callback').fadeIn();
+    });
+    $('.window-callback').click(function (event) {
+        $target = $(event.target);
+        if (!$target.closest($('.form-callback')).length) $('.window-callback').fadeOut();
+    });
+    $('.close-marker').click(function() {
+        $('.window-callback').fadeOut();
+    });
+
 
     /******************************
      *********** sliders **********
