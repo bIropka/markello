@@ -501,24 +501,42 @@ nav ul li a.active:after {
     position: relative;
     z-index: 10;
 }
-.slide-developing, .slide-seo {
+.slide-project {
     display: block;
     margin: 0 5px;
     overflow: hidden;
+    position: relative;
 }
-.slide-developing img, .slide-seo img {
-    -webkit-transition: 3s;
-    -moz-transition: 3s;
-    -ms-transition: 3s;
-    -o-transition: 3s;
-    transition: 3s;
+.slide-project .slide-inner {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    left: 0;
+    top: -100%;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+    transition: 0.6s;
 }
-.slide-developing:hover img, .slide-seo:hover img {
-    -webkit-transform: translate(10px, 10px) scale(1.2);
-    -moz-transform: translate(10px, 10px) scale(1.2);
-    -ms-transform: translate(10px, 10px) scale(1.2);
-    -o-transform: translate(10px, 10px) scale(1.2);
-    transform: translate(10px, 10px) scale(1.2);
+.slide-project .slide-inner.active {
+    top: 0;
+}
+.slide-inner h4 {
+    font-family: 'Roboto Medium', sans-serif;
+    font-weight: 100;
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.slide-inner p {
+
 }
 .slider-projects .slider-control-left {
     background-position: -58px center;

@@ -130,5 +130,11 @@ $(document).ready(function () {
 
     });
 
+    $('.slide-project').hover(function() {
+            if ($(document).width() > 980) {
+                $(this).find('.slide-inner').toggleClass('active');
+            }
+        });
+
 });
 
