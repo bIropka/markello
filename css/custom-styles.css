@@ -137,12 +137,12 @@ header[role='banner'] .wrapper {
 .logo {
     width: 53px;
     height: 18px;
-    background: transparent url('../source/images/sprite-logo.png') no-repeat center top;
+    background: transparent url('../source/images/sprite-logo.png') no-repeat center -18px;
     position: relative;
     margin-right: 40px;
 }
 .logo:hover {
-    background-position: center -18px;
+    background-position: center top;
 }
 .logo:after {
     content: '';
@@ -454,6 +454,8 @@ nav ul li a.active:after {
     color: #ffffff;
     font-size: 18px;
     text-decoration: underline;
+    position: relative;
+    z-index: 10;
 }
 .to-portfolio:hover {
     text-decoration: none;
@@ -464,6 +466,7 @@ nav ul li a.active:after {
     height: 275px;
     width: 100%;
     margin-bottom: 20px;
+    z-index: 1;
 }
 .slider-projects ul li {
     display: block;
@@ -787,7 +790,7 @@ footer[role='contentinfo'] .logo {
     background-position: center bottom;
 }
 footer[role='contentinfo'] .logo:hover {
-    background-position: center -18px;
+    background-position: center -36px;
 }
 footer[role='contentinfo'] .logo:after {
     display: none;
@@ -932,7 +935,7 @@ footer[role='contentinfo'] .logo:after {
     .slider-projects ul {
         width: 430px;
         margin: 0 auto;
-        height: 1320px;
+        height: 500px;
     }
     .to-portfolio {
         float: none;
@@ -1030,7 +1033,7 @@ footer[role='contentinfo'] .logo:after {
     .slider-projects ul {
         width: 300px;
         margin: 0 auto;
-        height: 920px;
+        height: 350px;
     }
     .slider-projects .slider-control {
         display: inline-block;
@@ -1042,7 +1045,7 @@ footer[role='contentinfo'] .logo:after {
         z-index: 10;
     }
     .to-portfolio {
-        bottom: 30px;
+        bottom: 20px;
         right: 10px;
     }
     .slider-projects .slider-control-left {

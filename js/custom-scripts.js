@@ -83,7 +83,8 @@ $(document).ready(function () {
                 breakpoint: 981,
                 settings: {
                     vertical: true,
-                    verticalSwiping: true
+                    verticalSwiping: true,
+                    slidesToShow: 1
                 }
             }
         ]
@@ -98,7 +99,8 @@ $(document).ready(function () {
                 breakpoint: 981,
                 settings: {
                     vertical: true,
-                    verticalSwiping: true
+                    verticalSwiping: true,
+                    slidesToShow: 1
                 }
             }
         ]
