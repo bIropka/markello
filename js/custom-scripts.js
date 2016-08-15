@@ -14,13 +14,25 @@ $(document).ready(function () {
 
     $(".marks-hello").typed({
         strings: ["^500 Здравствуйте, меня зовут Марк Дружин.<br>Я занимаюсь созданием качественных seo сайтов под ключ. На моем счету более 400 выполненных проектов."],
-        typeSpeed: 0,
+        typeSpeed: -30,
         callback: function(){
             $('.marks-info').addClass('visible');
             $(setInterval(function() {
                 $('.employees-photos li').addClass('visible');
             }, 1000));
         }
+    });
+
+    $(function($) {
+        $('form').validatr({
+            showall: true
+        });
+    });
+
+    $('input[type="submit"]').click(function() {
+        $(this).parents('form').find('.form-field:invalid').addClass('invalid-field');
+        $(this).parents('form').find('.form-field:valid').addClass('valid-field');
+        $(this).parents('form').find('.form-textarea').removeClass('valid-field invalid-field');
     });
 
 
@@ -42,7 +54,7 @@ $(document).ready(function () {
         }
     });
 
-    $('input[type="tel"]').mask("+7 ( 9 9 9 ) 9 9 9 - 9 9 - 9 9");
+    $('input[type="tel"]').mask("+7 ( 999 ) 999 - 99 - 99");
     $('input[type="tel"]').click(function() {
         $(this).focus();
     });
@@ -52,8 +64,17 @@ $(document).ready(function () {
         var temp = $(this).val().split('\\');
         var fileName = temp[temp.length - 1];
         $('.file-name').html(fileName);
-        $('.file-type').css('opacity', 0);
+        $('.file-type').addClass('hidden');
+        $('.remove-file').addClass('active');
 
+    });
+
+    $('.remove-file').click(function() {
+        $(this).removeClass('active');
+        $('.file-type').removeClass('hidden');
+        $('.file-name').html('Прикрепите файл');
+        $('#file-download').val('');
+        return false;
     });
 
 
@@ -62,16 +83,9 @@ $(document).ready(function () {
      ******************************/
     sliderEmployee.slick({
         arrows: false,
-        dots: true
-    });
-    sliderEmployee.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-        $('.employees-photos li').eq(currentSlide).removeClass('active');
-        $('.employees-photos li').eq(nextSlide).addClass('active');
-    });
-    $('.employees-photos li').click(function() {
-        $('.employees-photos .active').removeClass('active');
-        $(this).addClass('active');
-        sliderEmployee.slick('slickGoTo', $(this).index());
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 6000
     });
 
     sliderDeveloping.slick({

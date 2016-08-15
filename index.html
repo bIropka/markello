@@ -163,39 +163,58 @@
         <ul class="employees-photos">
 
             <li class="marks-photo">
+                <figure>
+
+                </figure>
                 <img src="source/content/photo-employee-1.jpg" alt="Name Surname"/>
             </li>
 
             <li>
-                <img src="source/content/photo-employee-2.jpg" alt="Name Surname"/>
+                <figure>
+                    <img src="source/content/photo-employee-2.jpg" alt="Name Surname"/>
+                </figure>
             </li>
 
             <li>
-                <img src="source/content/photo-employee-3.jpg" alt="Name Surname"/>
+                <figure>
+                    <img src="source/content/photo-employee-3.jpg" alt="Name Surname"/>
+                </figure>
             </li>
 
             <li>
-                <img src="source/content/photo-employee-4.jpg" alt="Name Surname"/>
+                <figure>
+                    <img src="source/content/photo-employee-4.jpg" alt="Name Surname"/>
+                </figure>
             </li>
 
             <li>
-                <img src="source/content/photo-employee-5.jpg" alt="Name Surname"/>
+                <figure>
+                    <img src="source/content/photo-employee-5.jpg" alt="Name Surname"/>
+                </figure>
             </li>
 
             <li>
-                <img src="source/content/photo-employee-6.jpg" alt="Name Surname"/>
+                <figure>
+                    <img src="source/content/photo-employee-6.jpg" alt="Name Surname"/>
+                </figure>
             </li>
 
             <li>
-                <img src="source/content/photo-employee-7.jpg" alt="Name Surname"/>
+                <figure>
+                    <img src="source/content/photo-employee-7.jpg" alt="Name Surname"/>
+                </figure>
             </li>
 
             <li>
-                <img src="source/content/photo-employee-8.jpg" alt="Name Surname"/>
+                <figure>
+                    <img src="source/content/photo-employee-8.jpg" alt="Name Surname"/>
+                </figure>
             </li>
 
             <li>
-                <img src="source/content/photo-employee-9.jpg" alt="Name Surname"/>
+                <figure>
+                    <img src="source/content/photo-employee-9.jpg" alt="Name Surname"/>
+                </figure>
             </li>
 
         </ul>
@@ -513,15 +532,15 @@
             <fieldset class="short-fields">
 
                 <label class="form-field-wrap">
-                    <input type="text" id="user-name" class="form-field" placeholder="Представьтесь, пожалуйста"/>
+                    <input type="text" id="user-name" class="form-field" pattern="^[А-Яа-я]+$" placeholder="Представьтесь, пожалуйста" required/>
                 </label>
 
                 <label class="form-field-wrap">
-                    <input type="email" id="user-email" class="form-field" placeholder="Ваш e-mail"/>
+                    <input type="email" id="user-email" class="form-field" placeholder="Ваш e-mail" required/>
                 </label>
 
                 <label class="form-field-wrap">
-                    <input type="tel" id="user-phone" class="form-field" placeholder="и телефон"/>
+                    <input type="tel" id="user-phone" class="form-field" placeholder="и телефон" required/>
                 </label>
 
             </fieldset>
@@ -531,6 +550,7 @@
             </label>
 
             <label class="file-download">
+                <span class="remove-file"></span>
                 <span class="file-name">Прикрепите файл</span>
                 <span class="file-type">pdf. doc. jpg. txt.</span>
                 <input type="file" id="file-download"/>
@@ -594,6 +614,7 @@
 
 
 <script src="js/jquery-2.2.4.min.js"></script>
+<script src="js/validatr.min.js"></script>
 <script src="js/slick.min.js"></script>
 <script src="js/jquery.maskedinput.min.js"></script>
 <script src="js/typed.min.js"></script>

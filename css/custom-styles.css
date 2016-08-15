@@ -120,6 +120,19 @@ img {
 .form-field:focus:-moz-placeholder {color: transparent;}
 .form-field:focus:-ms-input-placeholder {color: transparent;}
 
+.validatr-message {
+    display: none;
+}
+
+.invalid-field {
+    border: 1px solid #ff0000!important;
+    background: url('../source/images/icon-invalid.png') no-repeat 98% center, linear-gradient(to right, #dbf3d5, #f3f8c7)!important;
+}
+.valid-field {
+    border: 1px solid #008000!important;
+    background: url('../source/images/icon-valid.png') no-repeat 98% center, linear-gradient(to right, #dbf3d5, #f3f8c7)!important;
+}
+
 /***********************
 ******* header *********
 ***********************/
@@ -140,6 +153,11 @@ header[role='banner'] .wrapper {
     background: transparent url('../source/images/sprite-logo.png') no-repeat center -18px;
     position: relative;
     margin-right: 40px;
+    -webkit-transition: 0s;
+    -moz-transition: 0s;
+    -ms-transition: 0s;
+    -o-transition: 0s;
+    transition: 0s;
 }
 .logo:hover {
     background-position: center top;
@@ -275,7 +293,6 @@ nav ul li a.active:after {
     display: block;
     width: 33.33333%;
     float: left;
-    cursor: pointer;
     position: relative;
     opacity: 0;
     -webkit-transition: 1s;
@@ -296,11 +313,40 @@ nav ul li a.active:after {
     border-top: 2px solid transparent;
     z-index: 1;
 }
-.employees-photos li:hover {
-    border: 1px solid #539b28;
+.employees-photos li figure {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    overflow: hidden;
 }
-.employees-photos li.active {
-    border: 1px solid #008000;
+.employees-photos li figure::before {
+    position: absolute;
+    top: 0;
+    left: -75%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 50%;
+    height: 100%;
+    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+    -webkit-transform: skewX(-25deg);
+    transform: skewX(-25deg);
+}
+.employees-photos li figure:hover::before {
+    -webkit-animation: shine .75s;
+    animation: shine .75s;
+}
+@-webkit-keyframes shine {
+    100% {
+        left: 125%;
+    }
+}
+@keyframes shine {
+    100% {
+        left: 125%;
+    }
 }
 
 /***********************
@@ -506,6 +552,9 @@ nav ul li a.active:after {
     margin: 0 5px;
     overflow: hidden;
     position: relative;
+}
+.slide-project:hover, .slide-project:active {
+    outline: none;
 }
 .slide-project .slide-inner {
     display: block;
@@ -724,7 +773,7 @@ nav ul li a.active:after {
     width: 100%;
     height: 100%;
     background: linear-gradient(to right, #dbf3d5, #f3f8c7);
-    padding: 0 10px;
+    padding: 0 20px 0 10px;
     border: 1px solid transparent;
 }
 .get-in-touch .form-field:focus {
@@ -745,11 +794,25 @@ nav ul li a.active:after {
     float: right;
     border: 5px solid #ebebeb;
     text-align: center;
-    padding: 10px;
+    padding: 15px 10px;
     background: transparent url('../source/images/icon-file-download.png') no-repeat center 80%;
     background-size: 50%;
     cursor: pointer;
     overflow: hidden;
+    position: relative;
+}
+.file-download .remove-file {
+    display: none;
+    width: 10px;
+    height: 9px;
+    background: url('../source/images/icon-invalid.png');
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+.file-download .remove-file.active {
+    display: block;
 }
 .get-in-touch .file-download input {
     opacity: 0;
@@ -763,6 +826,10 @@ nav ul li a.active:after {
 }
 .get-in-touch .file-download .file-type {
     color: #8b8b8b;
+    opacity: 1;
+}
+.get-in-touch .file-download .file-type.hidden {
+    opacity: 0;
 }
 .get-in-touch .submit-block {
     display: block;
@@ -841,6 +908,9 @@ footer[role='contentinfo'] .logo:after {
 
     .wrapper {
         padding: 40px 25px;
+    }
+    footer[role='contentinfo'] .wrapper {
+        padding: 10px 25px;
     }
     header[role='banner'] .wrapper {
         padding: 15px 25px 15px 20px;
@@ -1047,6 +1117,9 @@ footer[role='contentinfo'] .logo:after {
 
     .wrapper {
         padding: 20px 10px;
+    }
+    footer[role='contentinfo'] .wrapper {
+        padding: 10px;
     }
     .slider-projects ul {
         width: 300px;
