@@ -552,6 +552,10 @@ nav ul li a.active:after {
     margin: 0 5px;
     overflow: hidden;
     position: relative;
+    background-color: #000000;
+}
+.slide-project figcaption {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 .slide-project a {
     padding: 20px 10px;
